@@ -1,16 +1,14 @@
 prime_number=[]
 non_prime_number=[]
-a=int(input('Enter the no of elements:'))
-for i in range(0,a):
-  n=int(input())
-  if(n>1):
-    for i in range(2,n//2):
-      if((n%i)==0):
-        non_prime_number.append(n) 
+s=int(input('Enter the start value:'))
+e=int(input('Enter the end value:'))
+for i in range(s,e+1):
+  if(i>1):
+    for no in range(2,i):
+      if(i % no)==0:
+        non_prime_number.append(i)
         break
     else:
-      prime_number.append(n)
-  else:
-    non_prime_number.append(n)    
-print('prime_number in list:',prime_number)
-print('non_prime_number in list',non_prime_number)
+      prime_number.append(i)    
+print('prime num in list',prime_number)
+print('Non prime num in list',non_prime_number)

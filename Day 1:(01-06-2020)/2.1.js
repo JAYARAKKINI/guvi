@@ -32,7 +32,7 @@ function college()  // creating function named college
     }
  
 ]
-	var Person2=library[0].readers.count=500;	//Updating person2 value in readers of title "Javacript"
-    console.log(Person2);
+    library[0].readers.count=500;	//Updating person2 value in readers of title "Javacript"
+    console.log(library[0].readers.count);
 }
 college();    // Call function college

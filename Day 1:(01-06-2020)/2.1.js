@@ -26,7 +26,7 @@ function college()  // creating function named college
 			price:600,
 			readers:[],
 			authordetails:{
-                name:"raj",
+                name:"Raj",
                 age:40
         }
     }

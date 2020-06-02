@@ -1,0 +1,24 @@
+ //  Extract and print the all the country name with capital name in console
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Extract and print the all the country name with capital name in console</title>
+</head>
+<body>
+<script>
+	var request = new XMLHttpRequest()  							                // Declaring variable request
+	request.open('GET','https://restcountries.eu/rest/v2/all',true)   //Request for getting API for restcountries
+	request.onload = function(){       								                // creating function
+	var jsonData = JSON.parse(this.response) 						              //converting JSON into json object
+	for(var i in jsonData)                  						              //for loop for iteration
+	{
+		console.log(jsonData[i].name,":" ,jsonData[i].capital)          //console for displaying country name and capital name
+	}
+}
+request.send()														  //call function
+
+</script>
+</body>
+</html>

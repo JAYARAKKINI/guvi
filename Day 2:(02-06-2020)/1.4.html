@@ -1,0 +1,29 @@
+//  Display the count of all countries sharing their border with the country name in console.
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Display the count of all countries sharing their border with the country name in console.
+</title>
+</head>
+<body>
+<script>
+	var request = new XMLHttpRequest()  							  // Declaring variable request
+	request.open('GET','https://restcountries.eu/rest/v2/all',true)   //Request for getting API for restcountries
+	request.onload = function(){       								  // creating function
+	var jsonData = JSON.parse(this.response) 						  //converting JSON into json object
+	for(var i in jsonData)                  						  //for loop for iteration
+	{   
+		var border=jsonData[i].borders;
+		var len;
+		len=border.length;
+		console.log(jsonData[i].name,"shares its border with",len," countries that includes " ,jsonData[i].borders) //console for displaying country name and its sharing border	
+	}
+}
+request.send()														  //call function
+
+</script>
+</body>
+</html>
